@@ -1,0 +1,100 @@
+1.
+int main()
+{
+    printf("Hello Students");
+    return 0;
+    getch();
+}
+
+2.
+int main()
+{
+    printf("Hello\nStudents");
+    return 0;
+    getch();
+}
+
+3.
+int main()
+{
+    printf("\"MysirG\"");
+    return 0;
+    getch();
+}
+
+4.
+int main()
+{
+    int R;
+    float A;
+    printf("Enter radius of circle");
+    scanf("%d",&R);
+    A=(3.14*R*R);
+    printf("Area of circle is %f having the radius %d",A,R);
+    return 0;
+    getch();
+}
+5.
+int main()
+{
+    char string[1000];
+    printf("Enter the string");
+    scanf("%s",string);
+    printf("length of string is %d",strlen(string));
+    return 0;
+    getch();
+}
+
+6.
+
+int main()
+{
+    printf("\"Hello , Durgesh pratap tiwari\"");
+    return 0;
+    getch();
+}
+
+7.
+int main()
+{
+    printf("%%d");
+    return 0;
+    getch();
+}
+8.
+int main()
+{
+    printf("\\n");
+    return 0;
+    getch();
+}
+9.
+int main()
+{
+    printf("\\\\");
+    return 0;
+    getch();
+}
+10.
+int main()
+{
+    int DD,MM,YYYY;
+    printf("Enter date");
+    scanf("%d%d%d",&DD,&MM,&YYYY);
+    printf("Day-%d , Month-%d , Year-%d",DD,MM,YYYY);
+    return 0;
+    getch();
+}
+11.
+int main()
+{
+    int HH,MM;
+    printf("Enter time");
+    scanf("%d%d",&HH,&MM);
+    printf("%d hour and %d Minute",HH,MM);
+    return 0;
+    getch();
+}
+12.
+
+ineuron7
