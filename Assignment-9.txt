@@ -1,0 +1,291 @@
+1.
+int main()
+{
+    int a;
+    printf("Enter the no. of month");
+    scanf("%d",&a);
+    switch(a)
+    {
+        case 4:
+            printf("No. of days in this month is 30");
+            break;
+        case 6:
+            printf("No. of days in this month is 30");
+            break;
+        case 9:
+            printf("No. of days in this month is 30");
+            break;
+        case 11:
+            printf("No. of days in this month is 30");
+            break;
+        case 2:
+            printf("No. of days in this month is 28 or 29");
+            break;
+        default:
+            printf("No. of days in this month is 31");
+    }
+    return 0;
+    getch();
+
+}
+2.
+int main()
+{
+    while(1)
+    {
+    int choice,a,b;
+    float c,d;
+    printf("\n 1.Addition");
+    printf("\n 2.Subtraction");
+    printf("\n 3.Multiplication");
+    printf("\n 4.Division");
+    printf("\n 5.Exit");
+    printf("\n Enter your choice");
+    scanf("%d",&choice);
+    switch(choice)
+    {
+    case 1:
+        printf("Enter two no.");
+        scanf("%d%d",&a,&b);
+        printf("Addition of two no. is %d",a+b);
+        break;
+    case 2:
+        printf("Enter two no.");
+        scanf("%d%d",&a,&b);
+        printf("Subtraction of two no. is %d",a-b);
+        break;
+    case 3:
+        printf("Enter two no.");
+        scanf("%d%d",&a,&b);
+        printf("Multiplication of two no. is %d",a*b);
+        break;
+    case 4:
+        printf("Enter two no.");
+        scanf("%d%d",&c,&d);
+        printf("Division of two no. is %f",c/d);
+        break;
+    default :
+        printf("Exit");
+    }
+    }
+    return 0;
+    getch();
+}
+3.
+int main()
+{
+    while(1)
+    {
+    int a;
+    printf("\n Enter the no. of week");
+    scanf("%d",&a);
+    switch(a)
+    {
+    case 1: printf(" Hey this is Sunday.\n This is the day of lord Shurya");
+    break;
+    case 2: printf(" Hey this is Monday.\n This is the day of lord Shiva");
+    break;
+    case 3: printf(" Hey this is Tuesday.\n This is the day of lord Hanuman");
+    break;
+    case 4: printf(" Hey this is Wednesday.\n This is the day of lord Ganesha");
+    break;
+    case 5: printf(" Hey this is Thursday.\n This is the day of lord Vishnu");
+    break;
+    case 6: printf(" Hey this is Friday.\n This is the day of Ma Durga");
+    break;
+    case 7: printf(" Hey this is Saturday.\n This is the day of lord Shani");
+    break;
+    default : printf(" Sorry i can not display unique message for this.");
+    }
+    }
+
+    return 0;
+    getch();
+
+}
+4.
+int main()
+{
+    while(1)
+    {
+    int a,b,c,choice;
+    printf("\n 1.Isosceles triangle");
+    printf("\n 2.Equilateral triangle");
+    printf("\n 3.Right angled triangled triangle");
+    printf("\n Exit");
+    printf("\n Enter your choice");
+    scanf("%d",&choice);
+    switch(choice)
+    {
+    case 1:
+        printf("Enter three no.");
+        scanf("%d%d%d",&a,&b,&c);
+        if(a==b||b==c||c==a)
+            printf("Given three no.are length of an Isosceles triangle");
+        else
+            printf("not a triangle");
+            break;
+    case 2:
+        printf("Enter three no.");
+        scanf("%d%d%d",&a,&b,&c);
+        if(a==b&&b==c)
+            printf("Given three no.are length of an Equilateral triangle");
+        else
+            printf("not a triangle");
+            break;
+    case 3:
+        printf("Enter three no.");
+        scanf("%d%d%d",&a,&b,&c);
+        if((a*a==b*b+c*c)||(b*b==a*a+c*c)||(c*c==b*b+a*a))
+            printf("Given three no.are length of a Right angled triangle");
+        else
+            printf("not a triangle");
+            break;
+    default:
+        printf("Exit");
+    }
+    }
+    return 0;
+    getch();
+}
+5.
+int main()
+{
+    int a;
+    printf("Enter the value of a");
+    scanf("%d",&a);
+    switch(a)
+    {
+    case 1:
+        printf("good");
+        break;
+    case 2:
+        printf("better");
+        break;
+    case 3:
+        printf("best");
+        break;
+    default:
+        printf("Invalid");
+    }
+    getch();
+    return 0;
+}
+6.
+int main()
+{
+    int year;
+    printf("Enter year");
+    scanf("%d",&year);
+    switch(year%100==0)
+    {
+    case 1:
+        switch(year%400==0)
+        {
+            case 1:printf("This year is a leap year");
+            break;
+            case 0:printf("This is not a leap year");
+        }
+        break ;
+    case 0:
+        switch(year%4==0)
+        {
+        case 1:printf("This year is a leap year");
+        break;
+        case 0:printf("this year is not a leap year");
+        }
+    }
+    getch();
+    return 0;
+}
+7.
+int main()
+{
+    float x,y,Total;
+    printf("Enter your electricity unit charge");
+    scanf("%f",&y);
+    switch(y<=50)
+    {
+    case 1:x=y*0.50;
+        break;
+    case 0:switch(y<=150)
+        {case 1:x=50*0.50+(y-50)*0.75;
+            break;
+         case 0:switch(y<=250)
+         {
+         case 1: x=50*0.50+100*0.75+(y-150)*1.20;
+            break;
+         case 0: x=50*0.50+100*0.75+100*1.20+(y-250)*1.50;
+         }
+        }
+    }
+    Total=x+(x*0.2);
+    printf("Total electricity bill is %f",Total);
+    getch();
+    return 0;
+}
+8.
+int main()
+{
+    int num,x;
+    printf("Enter the no.");
+    scanf("%d",&num);
+    switch (num!=0)
+    {
+    case 1 :
+        x=(num-2*num);
+        printf("%d",x);
+        break;
+    default :printf("Zero is not a negative no.");
+    }
+    return ;
+    getch();
+}
+9.
+int main()
+{
+    int num,x;
+    printf("Enter the no.");
+    scanf("%d",&num);
+    switch (num%2==0)
+    {
+    case 1 :
+        x=(num+1);
+        printf("%d",x);
+        break;
+    default :printf("You entered odd no.");
+    }
+    return ;
+    getch();
+}
+10.
+int main()
+{
+    float a,b,c,D,X,Y;
+    printf("enter the value of a,b and c");
+    scanf("%f%f%f",&a,&b,&c);
+    D=b*b-4*a*c;
+    switch(D==0)
+    {
+    case 1:
+        X=-b/(2*a);
+        Y=-b/(2*a);
+        printf("%f and %f",X,Y);
+        break;
+    case 0:
+        switch(D>0)
+        {
+        case 1:
+            X=(-b+sqrt(D))/(2*a);
+            Y=(-b-sqrt(D))/(2*a);
+            printf("%f and %f",X,Y);
+            break;
+        case 0:
+            printf("Root are imaginary");
+
+        }
+    }
+    return 0;
+    getch();
+
+}
