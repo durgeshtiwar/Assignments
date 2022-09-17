@@ -1,0 +1,217 @@
+1.
+float Area (float r)
+{
+    float A;
+    A=3.14*r*r;
+    return A;
+}
+
+int main()
+{
+    float X,R;
+    printf("Enter the radius");
+    scanf("%f",&R);
+    X=Area(R);
+    printf("%f",X);
+    return 0;
+    getch();
+
+}
+2.
+float interest (float a,float b,float c)
+{
+    float A;
+    A=(a*b*c)/100;
+    return A;
+}
+
+int main()
+{
+    float SI,p,t,r;
+    printf("Enter the component of SI");
+    scanf("%f%f%f",&p,&t,&r);
+    SI=interest(p,t,r);
+    printf("Simple interest is %f",SI);
+    return 0;
+    getch();
+
+}
+3.
+int chek(int num)
+{
+    if (num%2==0)
+        return 1;
+    else
+        return 0;
+}
+int main()
+{
+    int x;
+    printf("enter the value of x");
+    scanf("%d",&x);
+    printf("%d",chek(x));
+    return 0;
+    getch();
+
+}
+4.
+int natural(int num)
+{
+    int i;
+    for(i=1;i<=num;i++)
+        printf("%d\n",i);
+}
+int main()
+{
+    int x;
+    printf("enter the value of x");
+    scanf("%d",&x);
+    natural(x);
+    return 0;
+    getch();
+
+}
+5.
+int oddnatural(int num)
+{
+    int i;
+    for(i=1;i<=num;i=i+2)
+        printf("%d\n",i);
+}
+int main()
+{
+    int x;
+    printf("enter the value of x");
+    scanf("%d",&x);
+    oddnatural(x);
+    return 0;
+    getch();
+
+}
+6.
+int fact(int num)
+{
+    int F;
+    for(F=num-1;F>=1;F--)
+    {
+        num=num*F;
+    }
+    return num;
+}
+int main()
+{
+    int x;
+    printf("enter the value of x");
+    scanf("%d",&x);
+    printf("%d",fact(x));
+    return 0;
+    getch();
+
+}
+7.
+combi(int a,int b)
+{
+    int A;
+    A=fact(a)/(fact(b)*fact(a-b));
+    return A;
+}
+int fact(int num)
+{
+    int F;
+    for(F=num-1;F>=1;F--)
+    {
+        num=num*F;
+    }
+    return num;
+}
+int main()
+{
+    int n,r,x;
+    printf("Enter the value of n and r");
+    scanf("%d%d",&n,&r);
+    x=combi(n,r);
+    printf("No. of combination is%d",x);
+    getch();
+    return 0;
+
+}
+8.
+combi(int a,int b)
+{
+    int A;
+    A=fact(a)/fact(a-b);
+    return A;
+}
+int fact(int num)
+{
+    int F;
+    for(F=num-1;F>=1;F--)
+    {
+        num=num*F;
+    }
+    return num;
+}
+int main()
+{
+    int n,r,x;
+    printf("Enter the value of n and r");
+    scanf("%d%d",&n,&r);
+    x=combi(n,r);
+    printf("No. of arrangements is%d",x);
+    getch();
+    return 0;
+
+}
+9.
+int digit(int a,int b)
+{
+    while(1)
+    {
+
+        if(a%10==b)
+            return a;
+        a=a/10;
+    }
+}
+int main()
+{
+    int num,dig,x;
+    printf("Enter the no.and digit");
+    scanf("%d%d",&num,&dig);
+    x=digit(num,dig);
+    printf("Given no.is contain a given digit %d",dig);
+    getch();
+    return 0;
+
+}
+
+10.
+int main()
+{
+    int x;
+    printf("Enter the no.");
+    scanf("%d",&x);
+    factor(x);
+    getch();
+    return 0;
+}
+int factor(int a)
+{
+    int i,j;
+    for(i=2;i<=a;i++)
+    {
+        if(a%i==0)
+        {
+            a=a/i;
+        for(j=2;j<=i;j++)
+        {
+            if (i%j==0)
+                break;
+        }
+        if (i==j)
+            printf("%d\n",i);
+        }
+
+    }
+
+}
