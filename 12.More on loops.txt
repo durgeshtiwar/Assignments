@@ -1,0 +1,69 @@
+1.
+num = 141563
+print(str(num)[::-1])
+2.
+a=int(input("Enetr the no."))
+for i in range(2,a-1):
+    if a%i==0:
+        print("Given no is not a prime no.")
+        break
+else:
+    print("Given no is a prime no.")
+3.
+for i in range(1,100):
+    for j in range(2,i):
+        if i%j==0:
+            break
+    else:
+        print(i)
+4.
+a=int(input("Enter first no."))
+b=int(input("Enter second no."))
+for i in range(a,b+1):
+    for j in range(2,i):
+        if i%j==0:
+            break
+    else:
+        print(i)
+5.
+a=int(input("Enter the no."))
+while 1 :
+    a=a+1
+    for j in range(2,a):
+        if a%j==0:
+            break
+    else:
+        print(a)
+        break
+6.
+N=int(input("Enter the no."))
+a=1
+count=0
+while 1 :
+    a=a+1
+    for j in range(2,a):
+        if a%j==0:
+            break
+    else:
+        count=count+1
+        print(a)
+        if N==count:
+            break
+9.
+a=int(input("Enter first no."))
+b=int(input("Enter second no."))
+i=1
+while 1 :
+    i=i+1
+    if i%a==0 and i%b==0:
+        print("LCM of given no. is=",i)
+        break
+10.
+a=int(input("Enter first no."))
+b=int(input("Enter second no."))
+i=1
+while 1 :
+    i=i+1
+    if a%i==0 and b%i==0:
+        print("HCF of given no. is=",i)
+        break
