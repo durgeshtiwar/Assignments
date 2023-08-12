@@ -1,0 +1,45 @@
+1.
+s="Duregsh"
+s1='Pratap'
+s2=input("Enter any string ")
+print(s,s1,s2)
+2.
+s="iNeuron"
+for i in range(1,6):
+    print(s[i-1:i:1])
+3.
+s="Hello learners"
+for i in range(2,6):
+    print(s[i-1:i:1])
+4.
+a="Learning "
+b=" Python"
+print(a+b)
+5.
+a="iNeuron"
+count=0
+for i in a:
+    count+=1
+print("Total no. of characters in given string = ", count)
+6.
+a="iNeuron"
+print(a[::-1])
+7.
+a="Hello i am a student of iNeuron"
+print(a[13:21])
+8.
+a="22Ayodhya42"
+b="224206"
+print("a is cantains only digits" if a.isdigit()else "a does not cantains only digits")
+print("b is cantains only digits" if b.isdigit()else "b does not cantains only digits")
+9.
+a="22Ayodhya42"
+b="Faizabad"
+print("a is cantains only alphabats" if a.isalpha() else "a does not cantains only alphabets")
+print("b is cantains only alphabets" if b.isalpha() else "b does not cantains only alphabets")
+10.
+a=224206
+print(a,type(a))
+b=str(a)
+print(b,type(b))
+                 
