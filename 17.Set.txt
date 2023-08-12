@@ -1,0 +1,47 @@
+1.
+S1={"C","C++","Python","Java script","php"}
+print(S1)
+2.
+s1={"Durgesh tiwari",20,"Male","B.tech"}
+for i in s1:
+   print(i)
+3.
+s1={"Durgesh tiwari",20,"Male","B.tech"}
+print(type(s1))
+4.
+s1={"C","C++","Python","Java script","php"}
+for i in s1:
+    if(i=="Python"):
+        print("Python is present in this set")
+        break
+else:
+    print("Python is not present in this set")
+5.
+s1={"Java","Python","SQL"}
+s1.remove("Java",)
+s1.remove("Python")
+s1.remove("SQL")
+s1.add("C")
+s1.add("Cpp")
+s1.add("NoSQL")
+print(s1)
+6.
+thisset={"Python","Django","JavaScript"}
+mylist=["Java","C"]
+{thisset.add(i) for i in mylist}
+print(thisset)
+7.
+thisset={"Python","Django","JavaScript","SQL"}
+thisset.discard("SQL")
+print(thisset)
+8.
+thisset={"Python","Django","JavaScript","SQL"}
+del(thisset)
+print(thisset)
+9.
+thisset={"Python","Django","JavaScript","SQL"}
+print({i for i in thisset})
+10.
+thisset={10,56,14,23,56,78,95,43,15,75,65,48}
+print(max(thisset))
+print(min(thisset))
