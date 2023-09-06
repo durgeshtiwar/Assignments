@@ -1,0 +1,281 @@
+1.
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    queue<int>q;
+    q.push(4);
+    q.push(5);
+    q.push(6);
+    q.push(8);
+    q.push(7);
+    while (!q.empty())
+    {
+        cout<<q.front()<<" ";
+        q.pop();
+    }
+    return 0;
+}
+2.
+#include<bits/stdc++.h>
+using namespace std;
+class ticket
+{
+    public:
+    string tname;
+    int tnumber;
+};
+ticket tcounter()
+{
+    ticket temp;
+    cout<<"Enter your name";
+    cin>>temp.tname;
+    srand(time(NULL));
+    temp.tnumber = rand();
+    return temp;
+}
+void showticket(queue<ticket>q)
+{
+    ticket temp;
+    cout<<"| ----Passenger name ---- | ---- ticket number ---- | ----"<<endl;
+    cout<<"----------------------------------------------------------"<<endl;
+    while (!q.empty())
+    {
+        temp=q.front();
+        cout<<"| ----"<<temp.tname<<" ---- |"<<" ----"<<temp.tnumber<<" ----| ----" <<endl;
+        q.pop();
+    }   
+}
+int main()
+{
+    queue<ticket>q;
+    int size;
+    cout<<"Enter the no. of passengers : "<<endl;
+    cin>>size;
+    for (int i = 0; i < size; i++)
+    {
+        q.push(tcounter());
+    }
+    showticket(q);
+    return 0;
+}
+3.
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    queue<int>q;
+    q.push(4);
+    q.push(5);
+    q.push(6);
+    q.push(8);
+    q.push(7);
+    if(q.size())
+    cout<<"queue is not empty";
+    else
+    cout<<"queue is empty";
+    return 0;
+}
+4.
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    queue<string>q;
+    string arr[] = {"Durgesh","Tiwari","Aditya","Singh","Kislay"};
+    int n = sizeof(arr)/sizeof(arr[0]);
+    sort(arr,arr+n);
+    for (int i = 0; i < n; i++)
+    {
+        q.push(arr[i]);
+    }
+    while (!q.empty())
+    {
+        cout<<q.front()<<endl;
+        q.pop();
+    }
+    
+    return 0;
+}
+5.
+#include<bits/stdc++.h>
+using namespace std;
+class applicant
+{
+    public:
+    string aName;
+    int aTime;
+};
+applicant reachingNo()
+{
+    applicant temp;
+    cout<<"Enter your name :"<<endl;
+    cin>>temp.aName;
+    cout<<"Enter your reaching time :"<<endl;
+    cin>>temp.aTime;
+    return temp;
+}
+void showapplicant(queue<applicant>q)
+{
+    applicant temp;
+    cout<<"| ----applicant's name ---- | ---- reaching time ---- | ----"<<endl;
+    cout<<"----------------------------------------------------------"<<endl;
+    while (!q.empty())
+    {
+        temp=q.front();
+        cout<<"| ----"<<temp.aName<<" ---- |"<<" ----"<<temp.aTime<<" ----| ----" <<endl;
+        q.pop();
+    }   
+}
+int main()
+{
+    queue<applicant>q;
+    int no;
+    cout<<"Enter the no. of applicant's : "<<endl;
+    cin>>no;
+    for (int i = 0; i < no; i++)
+    {
+        q.push(reachingNo());
+    }
+    showapplicant(q);
+    return 0;
+}
+6.
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    queue<int>q;
+    int size,n;
+    cout<<"Enter the size of queue"<<endl;
+    cin>>size;
+    cout<<"Enter elements : "<<endl;
+    for (int i = 0; i < size; i++)
+    {
+        cin>>n;
+        q.push(n);
+    }
+    cout<<"First element of queue is : "<<q.front()<<endl;
+    cout<<"Last element of queue is : "<<q.back()<<endl;
+    q.pop();
+    cin>>n;
+    q.push(n);
+    cout<<"now First element of queue is : "<<q.front()<<endl;
+    cout<<"now Last element of queue is : "<<q.back()<<endl;
+    cout<<"Size of queue is : "<<q.size()<<endl;
+    return 0;
+}
+7.
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    queue<string>q1;
+    queue<string>q2;
+    int size;
+    string n;
+    cout<<"Enter the size of first queue :"<<endl;
+    cin>>size;
+    cout<<"Enter elements : "<<endl;
+    for (int i = 0; i < size; i++)
+    {
+        cin>>n;
+        q1.push(n);
+    }
+    cout<<"Enter the size of second queue :"<<endl;
+    cin>>size;
+    cout<<"Enter elements : "<<endl;
+    for (int i = 0; i < size; i++)
+    {
+        cin>>n;
+        q2.push(n);
+    }
+    q1.swap(q2);
+    cout<<"now First queue is : "<<endl;
+    while (!q1.empty())
+    {
+        cout<<q1.front()<<" ";
+        q1.pop();
+    }
+    cout<<endl;
+    cout<<"now second queue is : "<<endl;
+    while (!q2.empty())
+    {
+        cout<<q2.front()<<" ";
+        q2.pop();
+    }
+    
+    return 0;
+}
+8.
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    queue<string>q;
+    q.push("Ayodhya");
+    q.push("Prayagraj");
+    q.push("lucknow");
+    string a;
+    cout<<"Enter any string"<<endl;
+    cin>>a;
+    q.push(a);
+    while (!q.empty())
+    {
+        cout<<q.front()<<" ";
+        q.pop();
+
+    }
+    return 0;
+}
+9.
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    queue<char>q;
+    q.push('d');
+    q.push('t');
+    q.push('p');
+    q.push('s');
+    while (!q.empty())
+    {
+        cout<<q.front()<<" ";
+        q.pop();
+
+    }
+    q.push('d');
+    q.push('t');
+    q.push('p');
+    q.push('s');
+    q.push('g');
+    cout<<endl;
+    cout<<"now queue is :"<<endl;
+     while (!q.empty())
+    {
+        cout<<q.front()<<" ";
+        q.pop();
+
+    }
+    return 0;
+}
+10.
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    queue<string>q;
+    q.push("Sultanpur");
+    q.push("Prayagraj");
+    q.push("lucknow");
+    q.push("Ayodhya");
+    q.pop();
+    while (!q.empty())
+    {
+        cout<<q.front()<<" ";
+        q.pop();
+
+    }
+    return 0;
+}
+
