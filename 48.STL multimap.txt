@@ -1,0 +1,283 @@
+1.
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+   multimap<int,int>m;
+   m.insert(pair<int,int>(5,57));
+   m.insert(pair<int,int>(9,64));
+   m.insert(pair<int,int>(4,83));
+   m.insert(pair<int,int>(2,29));
+   m.insert(pair<int,int>(1,35));
+   m.insert(pair<int,int>(9,64));
+   m.insert(pair<int,int>(4,83));
+   multimap<int,int>::iterator i;
+   for ( i = m.begin(); i != m.end(); i++)
+   {
+      cout<<"Key : "<<i->first<<" Value : "<<i->second<<endl;
+   }
+   return 0; 
+}
+2.
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+   multimap<int,int>m;
+   multimap<int,int>m1;
+   m.insert(pair<int,int>(5,57));
+   m.insert(pair<int,int>(9,64));
+   m.insert(pair<int,int>(4,83));
+   m.insert(pair<int,int>(2,29));
+   m.insert(pair<int,int>(1,35));
+   m.insert(pair<int,int>(9,64));
+   m.insert(pair<int,int>(4,83));
+   multimap<int,int>::iterator i;
+   cout<<"M--------------"<<endl;
+   for ( i = m.begin(); i != m.end(); i++)
+   {
+      cout<<"Key : "<<i->first<<" Value : "<<i->second<<endl;
+      m1.insert(pair<int,int>(i->first,i->second));
+   }
+   cout<<"M1-----------"<<endl;
+   for ( i = m1.begin(); i != m1.end(); i++)
+   {
+      cout<<"Key : "<<i->first<<" Value : "<<i->second<<endl;
+   }
+   
+   return 0; 
+}
+3.
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+   multimap<int,int>m;
+   multimap<int,int>m1;
+   m.insert(pair<int,int>(5,57));
+   m.insert(pair<int,int>(9,64));
+   m.insert(pair<int,int>(4,83));
+   m.insert(pair<int,int>(2,29));
+   m.insert(pair<int,int>(1,35));
+   m.insert(pair<int,int>(9,64));
+   m1.insert(pair<int,int>(4,83));
+   m1.insert(pair<int,int>(45,83));
+   m1.insert(pair<int,int>(2,9));
+   m1.insert(pair<int,int>(13,5));
+   m1.insert(pair<int,int>(91,4));
+   m1.insert(pair<int,int>(4,3));
+   multimap<int,int>::iterator i;
+   cout<<"M--------------"<<endl;
+   for ( i = m.begin(); i != m.end(); i++)
+   {
+      cout<<"Key : "<<i->first<<" Value : "<<i->second<<endl;
+      
+   }
+   cout<<"M1-----------"<<endl;
+   for ( i = m1.begin(); i != m1.end(); i++)
+   {
+      cout<<"Key : "<<i->first<<" Value : "<<i->second<<endl;
+   }
+   m.swap(m1);
+   cout<<"After Swapping -------------"<<endl;
+   cout<<"M--------------"<<endl;
+   for ( i = m.begin(); i != m.end(); i++)
+   {
+      cout<<"Key : "<<i->first<<" Value : "<<i->second<<endl;
+      
+   }
+   cout<<"M1-----------"<<endl;
+   for ( i = m1.begin(); i != m1.end(); i++)
+   {
+      cout<<"Key : "<<i->first<<" Value : "<<i->second<<endl;
+   }
+   return 0; 
+}
+4.
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+   multimap<int,int>m;
+   multimap<int,int>m1;
+   m.insert(pair<int,int>(5,57));
+   m.insert(pair<int,int>(9,64));
+   m.insert(pair<int,int>(4,83));
+   m.insert(pair<int,int>(2,29));
+   m.insert(pair<int,int>(1,35));
+   m.insert(pair<int,int>(9,64));
+   m1.insert(pair<int,int>(4,83));
+   m1.insert(pair<int,int>(45,83));
+   m1.insert(pair<int,int>(2,9));
+   m1.insert(pair<int,int>(13,5));
+   m1.insert(pair<int,int>(91,4));
+   m1.insert(pair<int,int>(4,3));
+   multimap<int,int>::iterator i;
+   cout<<"M--------------"<<endl;
+   for ( i = m.begin(); i != m.end(); i++)
+   {
+      cout<<"Key : "<<i->first<<" Value : "<<i->second<<endl;
+   }
+   cout<<"M1-----------"<<endl;
+   for ( i = m1.begin(); i != m1.end(); i++)
+   {
+      cout<<"Key : "<<i->first<<" Value : "<<i->second<<endl;
+   }
+   m.clear();
+   cout<<"After Erase ---------- "<<endl;
+   if(m.empty())
+   {
+      cout<<"Map M1 is empty "<<endl;
+   }
+   else
+   {
+   for ( i = m.begin(); i != m.end(); i++)
+   {
+      cout<<"Key : "<<i->first<<" Value : "<<i->second<<endl;      
+   }
+   }
+   cout<<"M1-----------"<<endl;
+   for ( i = m1.begin(); i != m1.end(); i++)
+   {
+      cout<<"Key : "<<i->first<<" Value : "<<i->second<<endl;
+   }
+   return 0; 
+}
+5.
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+   multimap<int,int>m;
+   multimap<int,int>m1;
+   m.insert(pair<int,int>(5,57));
+   m.insert(pair<int,int>(9,64));
+   m.insert(pair<int,int>(4,83));
+   m.insert(pair<int,int>(2,29));
+   m.insert(pair<int,int>(1,35));
+   m.insert(pair<int,int>(9,64));
+   m1.insert(pair<int,int>(4,83));
+   m1.insert(pair<int,int>(45,83));
+   m1.insert(pair<int,int>(2,9));
+   m1.insert(pair<int,int>(13,5));
+   m1.insert(pair<int,int>(91,4));
+   m1.insert(pair<int,int>(4,3));
+   multimap<int,int>::iterator i;
+   cout<<"M--------------"<<endl;
+   for ( i = m.begin(); i != m.end(); i++)
+   {
+      cout<<"Key : "<<i->first<<" Value : "<<i->second<<endl;
+   }
+   cout<<"M1-----------"<<endl;
+   for ( i = m1.begin(); i != m1.end(); i++)
+   {
+      cout<<"Key : "<<i->first<<" Value : "<<i->second<<endl;
+   }
+   m.erase(2);
+   m1.erase(13);
+   cout<<"After Erase ---------- "<<endl;
+   for ( i = m.begin(); i != m.end(); i++)
+   {
+      cout<<"Key : "<<i->first<<" Value : "<<i->second<<endl;      
+   }
+   cout<<"M1-----------"<<endl;
+   for ( i = m1.begin(); i != m1.end(); i++)
+   {
+      cout<<"Key : "<<i->first<<" Value : "<<i->second<<endl;
+   }
+   return 0; 
+} 
+6.
+7.
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+   multimap<int,int>m;
+   m.insert(pair<int,int>(5,57));
+   m.insert(pair<int,int>(9,64));
+   m.insert(pair<int,int>(4,83));
+   m.insert(pair<int,int>(2,29));
+   m.insert(pair<int,int>(1,35));
+   m.insert(pair<int,int>(9,64));
+   multimap<int,int>::iterator i;
+   for ( i = m.begin(); i != m.end(); i++)
+   {
+      cout<<"Key : "<<i->first<<" Value : "<<i->second<<endl;
+   }
+   i=m.lower_bound(9);
+   cout<<"Lower bound of  key 5 : "<<endl;
+   cout<<"Key : "<<i->first<<" Value : "<<i->second<<endl;
+   return 0; 
+}
+8.
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+   multimap<int,int>m;
+   m.insert(pair<int,int>(5,57));
+   m.insert(pair<int,int>(9,64));
+   m.insert(pair<int,int>(4,83));
+   m.insert(pair<int,int>(2,29));
+   m.insert(pair<int,int>(1,35));
+   m.insert(pair<int,int>(9,64));
+   multimap<int,int>::iterator i;
+   for ( i = m.begin(); i != m.end(); i++)
+   {
+      cout<<"Key : "<<i->first<<" Value : "<<i->second<<endl;
+   }
+   i=m.upper_bound(9);
+   cout<<"Lower bound of  key 5 : "<<endl;
+   cout<<"Key : "<<i->first<<" Value : "<<i->second<<endl;
+   return 0; 
+}
+9.
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+   multimap<int,int>m;
+   map<int,int>map;
+   m.insert(pair<int,int>(50,1));
+   m.insert(pair<int,int>(90,0));
+   m.insert(pair<int,int>(40,3));
+   m.insert(pair<int,int>(20,4));
+   m.insert(pair<int,int>(10,2));
+   multimap<int,int>::iterator i;
+   if(m.find(20)!=m.end())
+   {
+      m.erase(20);
+      cout<<"Erased 4 "<<endl;
+   }
+   else
+   {
+      cout<<"not found"<<endl;
+   }
+   for ( i = m.begin(); i != m.end(); i++)
+   {
+      map.insert(pair<int,int>(i->second,i->first));
+   }
+   int n = map.size();
+   int arr[n];
+   for ( i = map.begin(); i != map.end(); i++)
+   {
+      cout<<"Key : "<<i->first<<" Value : "<<i->second<<endl;
+      arr[i->first]=i->second;
+   } 
+   
+   for (int i : arr)
+   {
+      cout<<i<<" ";
+   }
+    
+   return 0; 
+}
