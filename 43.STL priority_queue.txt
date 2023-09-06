@@ -1,0 +1,326 @@
+1.
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    priority_queue<int>pq;
+    pq.push(5);
+    pq.push(9);
+    pq.push(2);
+    pq.push(4);
+    pq.push(8);
+    cout<<"Top of priority_queue : "<<pq.top()<<endl;
+    cout<<"Size of priority_queue : "<<pq.size()<<endl;
+    pq.pop();
+    while (!pq.empty())
+    {
+        cout<<pq.top()<<" "; 
+        pq.pop();
+    }
+    return 0;
+}
+2.
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    priority_queue<int>pq;
+    pq.push(5);
+    pq.push(9);
+    pq.push(2);
+    pq.push(4);
+    pq.push(8);
+    cout<<"Top of priority_queue : "<<pq.top()<<endl;
+    cout<<"Size of priority_queue : "<<pq.size()<<endl;
+    pq.pop();
+    while (!pq.empty())
+    {
+        cout<<pq.top()<<" "; 
+        pq.pop();
+    }
+    cout<<endl;
+    if(pq.empty())
+    cout<<"priority_queue is empty.";
+    else
+    cout<<"priority_queue is not empty.";
+    return 0;
+}
+3.
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    priority_queue<int,vector<int>,greater<int>>pq;
+    pq.push(5);
+    pq.push(9);
+    pq.push(2);
+    pq.push(4);
+    pq.push(8);
+    cout<<"Top of priority_queue is : "<<pq.top()<<endl;
+    while (!pq.empty())
+    {
+        cout<<pq.top()<<" ";
+        pq.pop();
+    }
+    return 0;
+}
+4.
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    priority_queue<int>pq1;
+    pq1.push(5);
+    pq1.push(9);
+    pq1.push(2);
+    pq1.push(4);
+    pq1.push(8);
+    priority_queue<int>pq2;
+    pq2.push(10);
+    pq2.push(85);
+    pq2.push(90);
+    pq2.push(30);
+    pq1.swap(pq2);
+    cout<<"first priority_queue is : "<<endl;
+    while (!pq1.empty())
+    {
+        cout<<pq1.top()<<" ";
+        pq1.pop();
+    }
+    cout<<endl;
+    cout<<"Second priority_queue is : "<<endl;
+    while (!pq2.empty())
+    {
+        cout<<pq2.top()<<" ";
+        pq2.pop();
+    }
+    return 0;
+}
+5.
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    priority_queue<int>pq;
+    array<int,5>arr;
+    int i=0;
+    pq.push(5);
+    pq.push(9);
+    pq.push(2);
+    pq.push(4);
+    pq.push(8);
+    while (!pq.empty())
+    {
+        arr[i]=pq.top();
+        pq.pop();
+        i=i+1;
+    }
+    int cunt = 0;
+    for ( i = 0; i < arr.size(); i++)
+    {
+        cout<<arr[i]<<" ";
+        if(arr[i]>arr[i+1])
+        cunt=cunt+1;
+    }
+    cout<<endl;
+    if(cunt+1==arr.size())
+    cout<<"All element in priority_queue are descending order,then we have a MAX HEAP";
+    else
+    cout<<"Not a MAX HEAP";
+    return 0;
+}
+6.
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    priority_queue<int,vector<int>,greater<int>>pq;
+    array<int,5>arr;
+    int i=0;
+    pq.push(5);
+    pq.push(9);
+    pq.push(2);
+    pq.push(4);
+    pq.push(8);
+    while (!pq.empty())
+    {
+        arr[i]=pq.top();
+        pq.pop();
+        i=i+1;
+    }
+    int cunt=0;
+    for ( i = 0; i < arr.size(); i++)
+    {
+        cout<<arr[i]<<" ";
+        if(arr[i]<arr[i+1])
+        cunt=cunt+1;
+    }
+    cout<<endl;
+    if(cunt == arr.size())
+    cout<<"All element in priority_queue are ascending order,then we have a MIN HEAP";
+    else
+    cout<<"Not a MIN HEAP";
+    return 0;
+}
+7.
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int arr1[]={5,6,8};
+    int arr2[]={4,7,8};
+    int N=sizeof(arr1)/sizeof(arr1[0]);
+    int M=sizeof(arr2)/sizeof(arr2[0]);
+    priority_queue<int,vector<int>,greater<int>>pq;
+    for (int i = 0; i < N; i++)
+    {
+        pq.push(arr1[i]);
+    }
+    for (int i = 0; i < M; i++)
+    {
+        pq.push(arr2[i]);
+    }
+    while (!pq.empty())
+    {
+        cout<<pq.top()<<" ";
+        pq.pop();
+    }
+    return 0;
+}
+8.
+**a**.
+#include<bits/stdc++.h>
+using namespace std;
+void print(priority_queue<int>pq , int N)
+{
+    int arr[N-1];
+    int a = pq.top();
+    pq.pop();
+    int b = pq.top();
+    pq.pop();
+    int i = 0;
+    if(a==b)
+    {
+        while (!pq.empty())
+        {
+            arr[i]=pq.top();
+            i=i+1;
+            pq.pop();
+        }
+        for ( i = 0; i < N-2; i++)
+        {
+            cout<<arr[i]<<" ";
+        }
+    }
+    else
+    {
+        pq.push(a-b);
+        while (!pq.empty())
+        {
+            arr[i]=pq.top();
+            i=i+1;
+            pq.pop();
+        }
+        for ( i = 0; i < N-1; i++)
+        {
+            cout<<arr[i]<<" ";
+        }
+    }
+}
+int main()
+{
+    int arr1[]={5,6,8,9,4,7,3};
+    int N=sizeof(arr1)/sizeof(arr1[0]);
+    priority_queue<int>pq;
+    for (int i = 0; i < N; i++)
+    {
+        pq.push(arr1[i]);
+    }
+    print(pq,N);
+    return 0;
+}
+**b**.
+#include<bits/stdc++.h>
+using namespace std;
+int print(priority_queue<int>pq )
+{
+    if(pq.size()==1)
+    return pq.top();
+    if(pq.size()==0)
+    return -1;
+    int a = pq.top();
+    pq.pop();
+    int b = pq.top();
+    pq.pop();
+    int i = 0;
+    if(a==b)
+    {
+        pq.push(a);
+        return print(pq);
+    }
+    if(a>b)
+    {
+        pq.push(a-b);
+        return print(pq);
+    }
+}
+int main()
+{
+    int arr1[]={3,5,2,7};
+    int N=sizeof(arr1)/sizeof(arr1[0]);
+    priority_queue<int>pq;
+    for (int i = 0; i < N; i++)
+    {
+        pq.push(arr1[i]);
+    }
+    cout<<print(pq);
+    return 0;
+}
+10.
+#include<bits/stdc++.h>
+using namespace std;
+int print(priority_queue<int>pq, int k)
+{
+    int n = pq.size();
+    int temp[n];
+    int i = 0;
+    while (!pq.empty())
+    {
+        temp[i]=pq.top();
+        i=i+1;
+        pq.pop();
+    }
+    int sum = 0;
+    int cnt = 0;
+    for ( i = 0; i < n; i++)
+    {
+        sum = sum + temp[i];
+        cnt = cnt + 1;
+        if(sum >= k)
+        break;
+    }
+    if(i!=n)
+    {
+    for ( i = 0; i < cnt; i++)
+    {
+        cout<<temp[i]<<" ";
+    }
+    cout<<endl;
+    return cnt;
+    }
+    else
+    return -1;
+}
+int main()
+{
+    int arr1[]={2,3,1,5,6,3,7,9,14,10,2,5};
+    int N=sizeof(arr1)/sizeof(arr1[0]);
+    int k = 35;
+    priority_queue<int>pq;
+    for (int i = 0; i < N; i++)
+    {
+        pq.push(arr1[i]);
+    }
+    cout<<"Smallest subsequenc is : "<<print(pq,k);
+    return 0;
+}
