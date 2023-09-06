@@ -1,0 +1,303 @@
+1.
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    stack<int>s;
+    s.push(5);
+    s.push(8);
+    s.push(3);
+    s.push(7);
+    s.push(6);
+    for (int i = 0; i < 5 ; i++)
+    {
+        cout<<s.top()<<" ";
+        s.pop();
+    }
+    
+}
+2.
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    stack<int>s;
+    s.push(5);
+    s.push(8);
+    s.push(3);
+    s.push(7);
+    s.push(6);
+    cout<<s.top();
+    
+}
+3.
+#include<bits/stdc++.h>
+using namespace std;
+int PEEK(stack<int>s)
+{
+    return s.top();
+}
+int SIZE(stack<int>s)
+{
+    return s.size();
+}
+int main()
+{
+    stack<int>s;
+    int n;
+    while (n!=0)
+    {
+        cout<<"1. PUSH"<<endl;
+        cout<<"2. POP"<<endl;
+        cout<<"3. PEEK"<<endl;
+        cout<<"4. SIZE."<<endl;
+        cout<<"5. CHECK EMPTY."<<endl;
+        cout<<"Enter your choice : ";
+        cin>>n;
+        switch (n)
+            {
+                case 1:
+                    int x;
+                    cout<<"Enter the no. : ";
+                    cin>>x;
+                    s.push(x);
+                    break;
+                case 2:
+                    if(s.empty())
+                        cout<<"Stack underflow "<<endl;
+                    else
+                        s.pop();
+                    break;
+                case 3:
+                    cout<<"Value of peek is : "<<PEEK(s)<<endl;
+                    break;
+                case 4:
+                    cout<<"Size of stack is : "<<SIZE(s)<<endl;
+                    break;
+                case 5:
+                    if(s.empty())
+                        cout<<"Stack is empty"<<endl;
+                    else
+                        cout<<"Stack is not empty"<<endl;
+                    break;
+                default:
+                    cout<<"Invalid choice "<<endl;
+                    break;;
+            }
+    }
+    return 0;
+}
+4.
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    string str= " I Love To Code";
+    stack<char>s1;   
+    stack<char>s2;                 
+    for (int i = 0; i < str.length(); i++)
+    {
+        s1.push(str[i]);
+    }
+    while (!s1.empty())
+    {
+        if(s1.top()!=' ')
+        {
+            s2.push(s1.top());
+            s1.pop();
+        }
+        else
+        {
+            while (!s2.empty())
+            {
+                cout<<s2.top();
+                s2.pop();
+            }
+            cout<<s1.top();
+            s1.pop();
+        }
+        // if(s1.top()==str[0])
+        // {
+        //     cout<<s1.top();
+        //     s1.pop();
+        // }
+    }
+    
+    return 0;
+}
+5.
+#include<bits/stdc++.h>
+using namespace std;
+void display(stack<int>s)
+{
+    while (!s.empty())
+    {
+        cout<<s.top()<<" ";
+        s.pop();
+    }
+}
+int main()
+{
+    stack<int>s1;  
+    stack<int>s2;
+    int n,m;
+    cout<<"How many element want to PUSH in stack : ";
+    cin>>n;
+    cout<<"Enter no. : ";
+    for (int i = 0; i < n; i++)
+    {
+        cin>>m;
+        s1.push(m);
+    }
+    cout<<"Element of first stack : ";
+    display(s1);
+    stack<int>temp;
+    while (!s1.empty())
+    {
+        temp.push(s1.top());
+        s1.pop();
+    }
+    while (!temp.empty())
+    {
+        s2.push(temp.top());
+        temp.pop();
+    }
+    cout<<"\nElement of second stack : ";
+    display(s2);
+    return 0;
+}
+6.
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    string str= "Reverse me";
+    stack<char>s1;                 
+    for (int i = 0; i < str.length(); i++)
+    {
+        s1.push(str[i]);
+    }
+    while (!s1.empty())
+    {
+        cout<<s1.top();
+        s1.pop();
+    }
+    return 0;
+}
+7.
+#include<bits/stdc++.h>
+using namespace std;
+void sort(stack<int>s1)
+{
+    stack<int>s2;
+    int temp;
+    while (!s1.empty())
+    {
+        temp=s1.top();
+        s1.pop();
+        while(!s2.empty()&& temp>s2.top())
+        {
+            s1.push(s2.top());
+            s2.pop();
+        }
+        s2.push(temp);
+    }
+    while (!s2.empty())
+    {
+        cout<<s2.top()<<" ";
+        s2.pop();
+    }
+    
+}
+int main()
+{
+    stack<int>s1;
+    int n,m;
+    cout<<"How many element want to PUSH in stack : ";
+    cin>>n;
+    cout<<"Enter no. : ";
+    for (int i = 0; i < n; i++)
+    {
+        cin>>m;
+        s1.push(m);
+    }
+    sort(s1);
+    return 0;
+}
+8.
+#include<bits/stdc++.h>
+using namespace std;
+void sort(stack<int>s1)
+{
+    stack<int>s2;
+    int temp;
+    while (!s1.empty())
+    {
+        temp=s1.top();
+        s1.pop();
+        while(!s2.empty()&& temp<s2.top())
+        {
+            s1.push(s2.top());
+            s2.pop();
+        }
+        s2.push(temp);
+    }
+    while (!s2.empty())
+    {
+        cout<<s2.top()<<" ";
+        s2.pop();
+    }
+    
+}
+int main()
+{
+    stack<int>s1;
+    int n,m;
+    cout<<"How many element want to PUSH in stack : ";
+    cin>>n;
+    cout<<"Enter no. : ";
+    for (int i = 0; i < n; i++)
+    {
+        cin>>m;
+        s1.push(m);
+    }
+    sort(s1);
+    return 0;
+}
+10.
+#include<bits/stdc++.h>
+using namespace std;
+void NGE(int arr[],int n)
+{
+    stack<int>s;
+    s.push(arr[0]);
+    for (int i = 1; i < n; i++)
+    {
+        if(s.empty())
+        {
+            s.push(arr[i]);
+            
+        }
+        while (!s.empty()&&s.top()<arr[i])
+        {
+                cout<<s.top()<<"->"<<arr[i]<<endl;
+                s.pop();
+        }
+        s.push(arr[i]);
+    }
+    while (!s.empty())
+    {
+        cout<<s.top()<<"->"<<-1<<endl;
+        s.pop();
+    }
+         
+}
+int main()
+{
+    int arr[]={4,5,2,25};
+    int n = sizeof(arr)/sizeof(arr[0]);
+    NGE(arr,n);
+    return 0;
+}
+
+
