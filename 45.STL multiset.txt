@@ -1,0 +1,250 @@
+1.
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+   multiset<int>ms;
+   ms.insert(5);
+   ms.insert(5);
+   ms.insert(6);
+   ms.insert(9);
+   ms.insert(9);
+   ms.insert(7);
+   ms.insert(3);
+   ms.insert(2);
+   ms.insert(5);
+   ms.insert(3);
+   ms.insert(3);
+   cout<<*(ms.begin());
+   return 0;
+}
+2.
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+   multiset<int>ms;
+   ms.insert(5);
+   ms.insert(5);
+   ms.insert(6);
+   ms.insert(9);
+   ms.insert(9);
+   ms.insert(7);
+   ms.insert(3);
+   ms.insert(2);
+   ms.insert(5);
+   ms.insert(3);
+   ms.insert(3);
+   cout<<*(ms.end());
+   return 0;
+}
+3.
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+   multiset<int>ms;
+   ms.insert(5);
+   ms.insert(5);
+   ms.insert(6);
+   ms.insert(9);
+   ms.insert(9);
+   ms.insert(7);
+   ms.insert(3);
+   ms.insert(2);
+   ms.insert(5);
+   ms.insert(3);
+   ms.insert(3);
+   cout<<ms.size();
+   return 0;
+}
+4.
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+   multiset<int>ms;
+   ms.insert(5);
+   ms.insert(5);
+   ms.insert(6);
+   ms.insert(9);
+   ms.insert(9);
+   ms.insert(7);
+   ms.insert(3);
+   ms.insert(2);
+   ms.insert(5);
+   ms.insert(3);
+   ms.insert(3);
+   cout<<ms.max_size();
+   return 0;
+}
+5.
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+   multiset<int>ms;
+   ms.insert(5);
+   ms.insert(5);
+   ms.insert(6);
+   ms.insert(9);
+   ms.insert(9);
+   ms.insert(7);
+   ms.insert(3);
+   ms.insert(2);
+   ms.insert(5);
+   ms.insert(3);
+   ms.insert(3);
+   if(ms.empty())
+   {
+      cout<<"Multi_set is empty";
+   }
+   else
+   {
+      cout<<"Multi_set is not empty";
+   }
+   return 0;
+}
+6.
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+   multiset<int>ms;
+   ms.insert(5);
+   ms.insert(5);
+   ms.insert(6);
+   ms.insert(9);
+   ms.insert(9);
+   ms.insert(7);
+   ms.insert(3);
+   ms.insert(2);
+   ms.insert(5);
+   ms.insert(3);
+   ms.insert(3);
+   for (auto i : ms)
+   {
+      cout<<i<<" ";
+   }
+   
+   return 0;
+}
+7.
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+   multiset<int>ms;
+   ms.insert(5);
+   ms.insert(5);
+   ms.insert(6);
+   ms.insert(9);
+   ms.insert(9);
+   ms.insert(7);
+   ms.insert(3);
+   ms.insert(2);
+   ms.insert(5);
+   ms.insert(3);
+   ms.insert(3);
+   for (auto i : ms)
+   {
+      cout<<i<<" ";
+   }
+   ms.clear();
+   cout<<endl;
+   if(ms.empty())
+   {
+      cout<<"Multi_set is empty";
+   }
+   else
+   {
+      cout<<"Multi_set is not empty";
+   }
+   return 0;
+}
+8.
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+   multiset<int>ms;
+   ms.insert(5);
+   ms.insert(5);
+   ms.insert(6);
+   ms.insert(9);
+   ms.insert(9);
+   ms.insert(7);
+   ms.insert(3);
+   ms.insert(2);
+   ms.insert(5);
+   ms.insert(3);
+   ms.insert(3);
+   ms.erase(3);
+   for (auto i : ms)
+   {
+      cout<<i<<" ";
+   }
+   return 0;
+}
+9.
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+   multiset<int>ms;
+   ms.insert(5);
+   ms.insert(5);
+   ms.insert(6);
+   ms.insert(9);
+   ms.insert(9);
+   ms.insert(7);
+   ms.insert(3);
+   ms.insert(2);
+   ms.insert(5);
+   ms.insert(3);
+   ms.insert(3);
+   for (auto i : ms)
+   {
+      cout<<i<<" "; 
+   }
+   cout<<endl;
+   auto it = ms.find(5);
+   if(it!=ms.end())
+   {
+      ms.erase(it);
+   }
+   for (auto i : ms)
+   {
+      cout<<i<<" "; 
+   }
+   return 0;
+}
+10.
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+   multiset<int>ms1={1,2,3};
+   multiset<int>ms2={1,1,2,3};
+   // sort(ms1.begin(),ms1.end());
+   // sort(ms2.begin(),ms2.end());
+   if((ms1)==(ms2))
+   {
+      cout<<"multi_set are equal ";
+   }
+   else
+   {
+      cout<<"multi_set are not equal";
+   }
+   return 0;
+}
