@@ -1,0 +1,60 @@
+1.
+def simpleFunction(a):
+    if(a>0):
+        simpleFunction(a-1)
+        print(a)
+simpleFunction(int(input("Enter the value of N")))
+2.
+def simpleFunction(a):
+    if(a>0):
+        print(a)
+        simpleFunction(a-1)
+simpleFunction(int(input("Enter the value of N")))
+3.
+def simpleFunction(a):
+    if(a>0):
+        simpleFunction(a-2)
+        print(a)
+simpleFunction(2*int(input("Enter the value of N"))-1) 
+4.
+def simpleFunction(a):
+    if(a>0):
+        print(a)
+        simpleFunction(a-2)
+simpleFunction(2*int(input("Enter the value of N"))-1)
+5.
+def simpleFunction(a):
+    if(a>0):
+        simpleFunction(a-2)
+        print(a)
+simpleFunction(2*int(input("Enter the value of N")))
+6.
+def simpleFunction(a):
+    if(a>0):
+        print(a)
+        simpleFunction(a-2)
+simpleFunction(2*int(input("Enter the value of N")))
+7.
+def simpleFunction(a):
+    if(a>0):
+        simpleFunction(a-1)
+        print(a*a)
+simpleFunction(int(input("Enter the value of N")))
+8.
+def simpleFunction(a):
+    if(a>0):
+        simpleFunction(a-1)
+        print(a*a*a)
+simpleFunction(int(input("Enter the value of N")))
+9.
+def simpleFunction(N,a):
+    if(N>0):
+        simpleFunction(N-1,a)
+        print(2*N)
+simpleFunction(int(input("Enter the value of N")),int(input("Enter the value of a")))
+10.
+def simpleFunction(a):
+    if(a>0):
+        print(a%10,end="")
+        simpleFunction(a//10)
+simpleFunction(int(input("Enter tha value of a")))

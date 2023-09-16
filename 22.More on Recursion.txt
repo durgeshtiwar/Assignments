@@ -1,0 +1,63 @@
+1.
+def simpleFunction(N):
+    if(N==1):
+        return 1
+    return simpleFunction(N-1)+N
+print(simpleFunction(int(input("Enter tha value of N"))))
+2.
+def simpleFunction(N):
+    if(N==1):
+        return 1
+    return simpleFunction(N-2)+N
+print(simpleFunction(2*int(input("Enter tha value of N"))-1))
+3.
+def simpleFunction(N):
+    if(N==2):
+        return 2
+    return simpleFunction(N-2)+N
+print(simpleFunction(2*int(input("Enter tha value of N"))))
+4.
+def simpleFunction(N):
+    if(N==1):
+        return 1
+    return simpleFunction(N-1)+N*N
+print(simpleFunction(int(input("Enter tha value of N"))))
+5.
+def simpleFunction(N):
+    if(N==1):
+        return 1
+    return simpleFunction(N-1)+N*N*N
+print(simpleFunction(int(input("Enter tha value of N"))))
+6.
+def simpleFunction(N):
+    if(N==1):
+        return 1
+    return simpleFunction(N-1)*N
+print(simpleFunction(int(input("Enter tha value of N"))))
+7.
+def simpleFunction(N):
+    if(N==0):
+        return 0
+    return simpleFunction(N//10)+N%10
+print(simpleFunction(int(input("Enter tha value of N"))))
+8.
+def simpleFunction(N):
+    if(N>1):
+        simpleFunction(N//2)
+    print(N%2,end="")
+print(simpleFunction(int(input("Enter tha value of N"))))
+9.
+def simpleFunction(N):
+    if(N>1):
+        simpleFunction(N//8)
+    print(N%8,end="")
+print(simpleFunction(int(input("Enter tha value of N"))))
+10.
+def simpleFunction(N):
+    if N<=1:
+        return N
+    else:
+        return(simpleFunction(N-1)+simpleFunction(N-2)) 
+N=simpleFunction(int(input("Enter tha value of N")))
+for i in range(N):
+    print(simpleFunction(i))

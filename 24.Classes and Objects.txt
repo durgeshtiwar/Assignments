@@ -1,0 +1,123 @@
+1.
+class User:
+    name = 'Durgesh'
+    age = 20
+    email = 'durgeshtiwari362592@gmail.com '
+i=User()
+print(i.name,i.age,i.email)
+2.
+class User:
+    name = 'Durgesh'
+    def greet(self):
+        print("Hello",User.name,"Good morning..")
+i=User()
+i.greet()
+3.
+class User:
+    def intro(self):
+        self.name="durgesh"
+        self.age=20
+        print(self.name,self.age)
+i1=User()
+i2=User()
+i1.intro()
+i2.intro()
+4.
+class User:
+    def __init__(self):
+        self.name="durgesh"
+        self.age=20
+        print(self.name,self.age)
+i1=User()
+i2=User()
+5.
+class User:
+    def __init__(self):
+        self.name="durgesh"
+        self.age=20
+        del self.age
+        print(self.name,self.age)
+        #del self.age
+i1=User()
+i2=User()
+6.
+class User:
+    def __init__(self,name,age):
+        self.name=name
+        self.age=age
+i1=User("A",20)
+i2=User("B",21)
+i3=User("C",32)
+if(i1.age<i2.age):
+    if(i2.age<i3.age):
+        print(i1.name,"is youngest of all")
+    else:
+        print(i3.name,"is youngest of all")
+else:
+    print(i2.name,"is youngest of all")
+7.
+class Laptop:
+    def __init__ (self,brand,ram,cpu,hdd):
+        self.brand=brand
+        self.ram=ram
+        self.cpu=cpu
+        self.hdd=hdd
+    def showConfig(self):
+        print("brand = ",self.brand)
+        print("ram = ",self.ram)
+        print("cpu = ",self.cpu)
+        print("hdd = ",self.hdd)
+l=Laptop("asus tuf",16,"core i7",0)
+l.showConfig()
+8.
+class Laptop:
+    def __init__ (self,brand,ram,cpu,hdd):
+        self.brand=brand
+        self.ram=ram
+        self.cpu=cpu
+        self.hdd=hdd
+    def showConfig(self):
+        print("brand = ",self.brand)
+        print("ram = ",self.ram)
+        print("cpu = ",self.cpu)
+        print("hdd = ",self.hdd)
+l1=Laptop("asus tuf",16,"core i7",0)
+l2=Laptop("acer",8,"core i5",0)
+l3=Laptop("AVITA",4,"core i3",0)
+l1.showConfig()
+l2.showConfig()
+l3.showConfig()
+l=[l3.ram,l1.ram,l2.ram]
+print(sorted(l))9.
+9.
+class School:
+    stream="Science"
+    def __init__(self):
+        self.name="Aman"
+        self.age=20
+        self.Class=10
+    def showdata(self):
+        print(self.stream)
+        print(self.name,self.age,self.Class)
+s=School()
+s.showdata()
+10.
+class Employee:
+    def __init__(self):
+        self.empid=0
+        self.name=0
+        self.salary=0
+    def Input(self,empid,name,salary):
+        self.empid=empid
+        self.name=name
+        self.salary=salary
+    def showData(self):
+        print("Empolyee id is : ",self.empid)
+        print("Empolyee Name is : ",self.name)
+        print("Empolyee Salary is : ",self.salary)
+e1=Employee()
+e2=Employee()
+e1.Input(1.0,"Duregsh Tiwari",700000)
+e2.Input(2.0,"Shubham Tiwari",700000)
+e1.showData()
+e2.showData()

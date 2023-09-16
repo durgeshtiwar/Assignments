@@ -1,0 +1,229 @@
+1.
+class profile:
+    def __init__(self,name,email,age):
+        self.name=name
+        self.email=email
+        self.age=age
+    def showData(self):
+        print("Name : ",self.name)
+        print("E-Mail : ",self.email)
+        print("Age : ",self.age)
+p=profile("Duregsh Tiwari","duregshtiwari362593@gamil.com",20)
+p.showData()
+2.
+class profile:
+    def __init__(self,name,email,age):
+        self.name=name
+        self.email=email
+        self.age=age
+    def showData(self):
+        print("Name : ",self.name)
+        print("E-Mail : ",self.email)
+        print("Age : ",self.age)
+    def updataData(self,newName,new_Email,newAge):
+        self.name=newName
+        self.email=new_Email
+        self.age=newAge
+p=profile("Duregsh Tiwari","duregshtiwari362593@gamil.com",20)
+#p.showData()
+p.updataData("Shubham Tiwari","shubhamtiwari362593@gmail.com",21)
+p.showData()
+3.
+class profile:
+    def __init__(self,name,email,age):
+        self.name=name
+        self.__email=email
+        self.__age=age
+    def showData(self):
+        print("Name : ",self.name)
+        print("E-Mail : ",self.__email)
+        print("Age : ",self.__age)
+    def updataData(self,newName,new_Email,newAge):
+        self.name=newName
+        self.__email=new_Email
+        self.__age=newAge
+p=profile("Duregsh Tiwari","duregshtiwari362593@gamil.com",20)
+p.showData()
+p.updataData("Shubham Tiwari","shubhamtiwari362593@gmail.com",21)
+p.showData()
+4.
+class profile:
+    platform="I don't know any platform"
+    def __init__(self,name,email,age):
+        self.name=name
+        self.__email=email
+        self.__age=age
+    def showData(self):
+        print("Name : ",self.name)
+        print("E-Mail : ",self.__email)
+        print("Age : ",self.__age)
+    def updataData(self,newName,new_Email,newAge):
+        self.name=newName
+        self.__email=new_Email
+        self.__age=newAge
+    @classmethod
+    def accessofClass(self):
+        print(profile.platform)
+p=profile("Duregsh Tiwari","duregshtiwari362593@gamil.com",20)
+p.showData()
+p.updataData("Shubham Tiwari","shubhamtiwari362593@gmail.com",21)
+p.showData()
+p.accessofClass()
+5.
+class calcuLator:
+    def __init__(self,a,b):
+        self.a=a
+        self.b=b
+    def add(self):
+        return (self.a+self.b)
+    def subTract(self):
+        return (self.a-self.b)
+C=calcuLator(8,3)
+print("Addition is : ",C.add())
+print("Subtraction is : ",C.subTract())
+6.
+class calcuLator:
+    def __init__(self,a,b):
+        self.a=a
+        self.b=b
+    def add(self):
+        return (self.a+self.b)
+    def subTract(self):
+        return (self.a-self.b)
+class calcuLator2(calcuLator):
+    def multi(self):
+        return (self.a*self.b)
+    def div(self):
+        return (self.a/self.b)
+C=calcuLator(8,3)
+c2=calcuLator2(8,3)
+print("Addition is : ",c2.add())
+print("Subtraction is : ",c2.subTract())
+print("Multiplication is : ",c2.multi())
+print("Division is : ",c2.div())
+7.
+class phone:
+    def calling(self):
+        self.a="it have good calling facility.\nit have best recharge plans."
+        print(self.a)
+    def sms(self):
+        self.b="100 SMS per day.\ntxt with photos."
+        print(self.b)
+p=phone()
+p.calling()
+p.sms()
+8.
+class calcuLator:
+    def __init__(self,a,b):
+        self.a=a
+        self.b=b
+    def add(self):
+        return (self.a+self.b)
+    def subTract(self):
+        return (self.a-self.b)
+class calcuLator2(calcuLator):
+    def multi(self):
+        return (self.a*self.b)
+    def div(self):
+        return (self.a/self.b)
+class phone:
+    def calling(self):
+        self.a="it have good calling facility.\nit have best recharge plans."
+        print(self.a)
+    def sms(self):
+        self.b="100 SMS per day.\ntxt with photos."
+        print(self.b)
+class Smartphone(calcuLator2,phone):
+    def Smart(self):
+        self.sp="I can do everythingh because i am Rajnikant(smart)."
+        print(self.sp)
+s=Smartphone(8,6)
+print("Addition is : ",s.add())
+print("Subtraction is : ",s.subTract())
+print("Multiplication is : ",s.multi())
+print("Division is : ",s.div())
+s.calling()
+s.sms()
+s.Smart()
+9.
+class Truecaller:
+    def __init__(self):
+        self.name=0
+        self.number=0
+        self.sNumber=0
+    def newEntry(self,x):
+        self.n={}
+        for self.i in range(0,x):
+            self.name=input("Enter your Name")
+            self.number=int(input("Enter your Number"))
+            self.n[self.name]=self.number
+    def fetchTheName(self,sNumber):
+        self.sNumber=sNumber
+        for i in self.n:
+            if self.n[i]==self.sNumber:
+                print("User of given no. is : ",i)
+                break
+t=Truecaller()
+x=int(input("How many entry you want ? "))
+t.newEntry(x)
+sNumber=int(input("Enter a number you want to search : "))
+t.fetchTheName(sNumber)
+10.
+class Truecaller:
+    def __init__(self):
+        self.name=0
+        self.number=0
+        self.sNumber=0
+    def newEntry(self,x):
+        self.n={}
+        for self.i in range(0,x):
+            self.name=input("Enter your Name")
+            self.number=int(input("Enter your Number"))
+            self.n[self.name]=self.number
+    def fetchTheName(self,sNumber):
+        self.sNumber=sNumber
+        for i in self.n:
+            if self.n[i]==self.sNumber:
+                print("User of given no. is : ",i)
+                break
+
+class calcuLator:
+    def __init__(self,a,b):
+        self.a=a
+        self.b=b
+    def add(self):
+        return (self.a+self.b)
+    def subTract(self):
+        return (self.a-self.b)
+class calcuLator2(calcuLator):
+    def multi(self):
+        return (self.a*self.b)
+    def div(self):
+        return (self.a/self.b)
+class phone:
+    def calling(self):
+        self.a="it have good calling facility.\nit have best recharge plans."
+        print(self.a)
+    def sms(self):
+        self.b="100 SMS per day.\ntxt with photos."
+        print(self.b)
+class Smartphone(calcuLator2,phone,Truecaller):
+    def Smart(self):
+        self.sp="I can do everythingh because i am Rajnikant(smart)."
+        print(self.sp)
+    def newMethod(self,t):
+        x=int(input("How many entry you want ? "))
+        t.newEntry(x)
+        sNumber=int(input("Enter a number you want to search : "))
+        t.fetchTheName(sNumber)
+s=Smartphone(8,6)
+print("Addition is : ",s.add())
+print("Subtraction is : ",s.subTract())
+print("Multiplication is : ",s.multi())
+print("Division is : ",s.div())
+s.calling()
+s.sms()
+s.Smart()
+t=Truecaller()
+s.newMethod(t)
+
