@@ -14,30 +14,36 @@
 // order.
 // 10. Write a function in C to count the frequency of each element of an array.
 
-#include <iostream> 
-using namespace std; 
-void sortArray(int arr[],int n)
+#include<iostream>
+using namespace std;
+void displayData(int[],int);
+void rotateArray(int arr[],int n)
 {
-    for(int i = 0; i<n-1 ;i++)
+    int arr1[n] , position;
+    cout<<"Enter the position : ";
+    cin>>position;
+    for (int i = 0; i < n-position; i++)
     {
-        for(int j = 1; j< n-i-1; j++)
-        {
-            if(arr[j] > arr[i])
-            {
-                int temp = arr[i];
-                arr[i] = arr[j];
-                arr[j] = temp;
-            }
-        }
+        arr1[i]=arr[i+position];
         
-        cout<<arr[i]<<",";
+    }
+    for (int i = 0; i < position; i++)
+    {
+        arr1[n-position+i] = arr[i];
+    }
+    displayData(arr1,5);
+}
+void displayData(int arr1[],int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        cout<<arr1[i]<<" ";
     }
 }
 int main()
 {
-    int arr[10] = {1,5,9,7,8,3,45,15,78,92};
+    int arr[5] = {32, 29, 40, 12, 70};
     int n = sizeof(arr)/sizeof(arr[0]);
-    cout <<"The Sorted Array is : \n";
-    sortArray(arr,n);
+    rotateArray(arr,n);
     return 0;
 }
