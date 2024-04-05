@@ -16,7 +16,13 @@
 
 #include<iostream>
 using namespace std;
-void displayData(int[],int);
+void displayData(int arr1[],int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        cout<<arr1[i]<<" ";
+    }
+}
 void rotateArray(int arr[],int n)
 {
     int arr1[n] , position;
@@ -33,13 +39,7 @@ void rotateArray(int arr[],int n)
     }
     displayData(arr1,5);
 }
-void displayData(int arr1[],int n)
-{
-    for (int i = 0; i < n; i++)
-    {
-        cout<<arr1[i]<<" ";
-    }
-}
+
 int main()
 {
     int arr[5] = {32, 29, 40, 12, 70};
