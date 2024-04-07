@@ -23,10 +23,10 @@ void displayData(int arr1[],int n)
         cout<<arr1[i]<<" ";
     }
 }
-void rotateArray(int arr[],int n)
+void rotateArrayLeft(int arr[],int n)
 {
     int arr1[n] , position;
-    cout<<"Enter the position : ";
+    cout<<"Enter the position for left Rotataion : ";
     cin>>position;
     for (int i = 0; i < n-position; i++)
     {
@@ -39,11 +39,28 @@ void rotateArray(int arr[],int n)
     }
     displayData(arr1,5);
 }
+void rotateArrayRight(int arr[],int n)
+{
+    int arr1[n] , position;
+    cout<<"Enter the position for right Rotation : ";
+    cin>>position;
+    for (int i = 0; i < position; i++)
+    {
+        arr1[i] = arr[n-position+i];
+    }
+    for (int i = 0; i < n-position; i++)
+    {
+        arr1[i+position] = arr[i];
+        
+    }
+    displayData(arr1,5);
+}
 
 int main()
 {
     int arr[5] = {32, 29, 40, 12, 70};
     int n = sizeof(arr)/sizeof(arr[0]);
-    rotateArray(arr,n);
+    rotateArrayLeft(arr,n);
+    rotateArrayRight(arr,n);
     return 0;
 }
