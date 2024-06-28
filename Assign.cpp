@@ -1,32 +1,38 @@
 #include <iostream>
 using namespace std;
-
-void selectionSort(int arr[], int size)
+class Complex
 {
+    int real;
+    int img;
 
-    for (int i = 0; i < size; i++)
+public:
+    Complex() {}
+    Complex(int r, int i)
     {
-        int index = i;
-        for (int j = i + 1; j < size; j++)
-        {
-            if (arr[j] < arr[index])
-            {
-                index = j;
-            }
-        }
-        int temp = arr[index];
-        arr[index] = arr[i];
-        arr[i] = temp;
+        real = r;
+        img = i;
     }
-    for (int i = 0; i < size; i++)
+    int getReal()
     {
-        cout << arr[i];
+        return real;
     }
-}
+    int getImg()
+    {
+        return img;
+    }
+    Complex operator+(Complex c)
+    {
+        Complex temp;
+        temp.real = real + c.real;
+        temp.img = img + c.img;
+        return temp;
+    }
+};
 int main()
 {
-    int arr[] = {2, 7, 5, 3, 8, 9};
-    int size = sizeof(arr) / sizeof(arr[0]);
-    selectionSort(arr, size);
+    Complex c1(10, 20), c2(30, 40), c3;
+    c3 = c1 + c2;
+    cout << "Real No. of Complex No. is = " << c3.getReal() << endl;
+    cout << "Real No. of Complex No. is = " << c3.getImg();
     return 0;
 }
