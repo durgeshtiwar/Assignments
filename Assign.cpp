@@ -2,37 +2,35 @@
 using namespace std;
 class Complex
 {
-    int real;
-    int img;
+    int real, imag;
 
 public:
-    Complex() {}
     Complex(int r, int i)
     {
         real = r;
-        img = i;
+        imag = i;
     }
-    int getReal()
-    {
-        return real;
-    }
-    int getImg()
-    {
-        return img;
-    }
-    Complex operator+(Complex c)
-    {
-        Complex temp;
-        temp.real = real + c.real;
-        temp.img = img + c.img;
-        return temp;
-    }
+    Complex() {}
+    friend istream &operator>>(istream &is, Complex &c);
+    friend ostream &operator<<(ostream &os, const Complex &c);
 };
+istream &operator>>(istream &is, Complex &c)
+{
+    cout << "Entr the Real Part Of Complex No.";
+    is >> c.real;
+    cout << "Enter the Imaginary Part Of Complex No.";
+    is >> c.imag;
+    return is;
+}
+ostream &operator<<(ostream &os, const Complex &c)
+{
+    os << c.real << "+" << c.imag << "i" << endl;
+    return os;
+}
 int main()
 {
-    Complex c1(10, 20), c2(30, 40), c3;
-    c3 = c1 + c2;
-    cout << "Real No. of Complex No. is = " << c3.getReal() << endl;
-    cout << "Real No. of Complex No. is = " << c3.getImg();
+    Complex c1;
+    cin >> c1;
+    cout << c1;
     return 0;
 }
