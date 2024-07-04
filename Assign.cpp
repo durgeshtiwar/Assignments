@@ -1,36 +1,73 @@
 #include <iostream>
+#include <cstring>
 using namespace std;
-class Complex
+
+class MyString
 {
-    int real, imag;
+    char *str;
+    int size;
 
 public:
-    Complex(int r, int i)
+    MyString()
     {
-        real = r;
-        imag = i;
+        cout << "Default Constructor Called" << endl;
+        str = (char *)malloc(1);
+        size = 1;
     }
-    Complex() {}
-    friend istream &operator>>(istream &is, Complex &c);
-    friend ostream &operator<<(ostream &os, const Complex &c);
+    MyString(char *a)
+    {
+        cout << "Parameterized Constructor Called" << endl;
+        size = strlen(a);
+        str = (char *)malloc(size + 1);
+        strcpy(str, a);
+    }
+    MyString(const MyString &a)
+    {
+        cout << "Copy Constructor Called" << endl;
+        size = strlen(a.str);
+        str = (char *)malloc(size + 1);
+        strcpy(str, a.str);
+    }
+    MyString &operator=(const MyString &a)
+    {
+        cout << "Assignment Operator Called" << endl;
+        // if (a == a.str)
+        // {
+        //     return *this;
+        // }
+        free(str);
+        size = strlen(a.str);
+        str = (char *)malloc(size + 1);
+        strcpy(str, a.str);
+        return *this;
+    }
+    void change(char *a)
+    {
+        free(str);
+        size = strlen(a);
+        str = (char *)malloc(size + 1);
+        strcpy(str, a);
+    }
+    void display()
+    {
+        cout << "String is: " << str << endl;
+    }
 };
-istream &operator>>(istream &is, Complex &c)
-{
-    cout << "Entr the Real Part Of Complex No.";
-    is >> c.real;
-    cout << "Enter the Imaginary Part Of Complex No.";
-    is >> c.imag;
-    return is;
-}
-ostream &operator<<(ostream &os, const Complex &c)
-{
-    os << c.real << "+" << c.imag << "i" << endl;
-    return os;
-}
 int main()
 {
-    Complex c1;
-    cin >> c1;
-    cout << c1;
+    MyString s1("Durgesh");
+    MyString s2 = s1;
+    MyString s3;
+    MyString s4("Ayodhya");
+    MyString s5;
+    s3 = s1;
+    s4 = s1;
+    s5 = s4 = s1;
+    s1.change("Tiwari");
+    s1.display();
+    s2.display();
+    s3.display();
+    s4.display();
+    s5.display();
     return 0;
 }
