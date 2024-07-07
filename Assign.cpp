@@ -1,29 +1,50 @@
-// Create a complex class and overload assignment operator for that class.
 #include <iostream>
 using namespace std;
+
 class Complex
 {
-    int real, img;
+private:
+    int real, img; // real, imaginary
 
 public:
-    Complex() { cout << "Default Constructor Called" << endl; }
-    Complex(int r, int i)
+    // Parameterized Constructor
+    Complex(int r, int i) : real(r), img(i) {}
+
+    // Assignment operator overload
+    Complex &operator=(const Complex &C)
     {
-        cout << "Parameterized Constructor Called" << endl;
-        real = r;
-        img = i;
+        // Check for self-assignment
+        if (this != &C)
+        {
+            real = C.real;
+            img = C.img;
+        }
+        return *this;
     }
-    void display()
-    {
-        cout << real << " + " << img << "i" << endl;
-    }
+
+    // Function to print
+    void print() const { cout << real << "+i" << img << endl; }
 };
+
 int main()
 {
-    Complex c1(10, 20);
-    c1.display();
-    Complex c2 = c1;
+    // Assigning by overloading constructor
+    Complex C1(2, 3), C2(4, 6);
 
-    c2.display();
+    cout << "BEFORE OVERLOADING ASSIGNMENT OPERATOR" << endl;
+    cout << "C1 complex number: ";
+    C1.print();
+    cout << "C2 complex number: ";
+    C2.print();
+
+    // Overloading assignment operator to copy values
+    C1 = C2;
+
+    cout << "AFTER OVERLOADING ASSIGNMENT OPERATOR" << endl;
+    cout << "C1 complex number: ";
+    C1.print();
+    cout << "C2 complex number: ";
+    C2.print();
+
     return 0;
 }
