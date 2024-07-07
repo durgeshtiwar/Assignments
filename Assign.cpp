@@ -1,45 +1,29 @@
+// Create a complex class and overload assignment operator for that class.
 #include <iostream>
 using namespace std;
-
-class Array
+class Complex
 {
-    int arr[100];
-    const int size = 100;
+    int real, img;
 
 public:
-    void setArray(int index, int n)
+    Complex() { cout << "Default Constructor Called" << endl; }
+    Complex(int r, int i)
     {
-        if (index >= size)
-        {
-            cout << "Array Index out of bound Exception" << endl;
-            exit(0);
-        }
-        arr[index] = n;
+        cout << "Parameterized Constructor Called" << endl;
+        real = r;
+        img = i;
     }
-    int operator[](int index)
+    void display()
     {
-        if (index >= size)
-        {
-            cout << "Array Index out of bound Exception" << endl;
-            exit(0);
-        }
-        return arr[index];
-    }
-    void display(int index)
-    {
-        if (index >= size)
-        {
-            cout << "Array Index out of bound Exception" << endl;
-            exit(0);
-        }
-        cout << "Element which are present on given Index " << arr[index] << endl;
+        cout << real << " + " << img << "i" << endl;
     }
 };
 int main()
 {
-    Array a1;
-    a1.setArray(5, 10);
-    a1.display(5);
-    cout << a1[5];
+    Complex c1(10, 20);
+    c1.display();
+    Complex c2 = c1;
+
+    c2.display();
     return 0;
 }
