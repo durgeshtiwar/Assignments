@@ -1,50 +1,29 @@
 #include <iostream>
 using namespace std;
 
-class Complex
+class integer
 {
-private:
-    int real, img; // real, imaginary
+    bool number = false;
 
 public:
-    // Parameterized Constructor
-    Complex(int r, int i) : real(r), img(i) {}
-
-    // Assignment operator overload
-    Complex &operator=(const Complex &C)
+    bool operator!()
     {
-        // Check for self-assignment
-        if (this != &C)
-        {
-            real = C.real;
-            img = C.img;
-        }
-        return *this;
+        if (!number)
+            return true;
+        else
+            return false;
     }
-
-    // Function to print
-    void print() const { cout << real << "+i" << img << endl; }
 };
-
 int main()
 {
-    // Assigning by overloading constructor
-    Complex C1(2, 3), C2(4, 6);
-
-    cout << "BEFORE OVERLOADING ASSIGNMENT OPERATOR" << endl;
-    cout << "C1 complex number: ";
-    C1.print();
-    cout << "C2 complex number: ";
-    C2.print();
-
-    // Overloading assignment operator to copy values
-    C1 = C2;
-
-    cout << "AFTER OVERLOADING ASSIGNMENT OPERATOR" << endl;
-    cout << "C1 complex number: ";
-    C1.print();
-    cout << "C2 complex number: ";
-    C2.print();
-
+    integer i;
+    if (!i)
+    {
+        cout << "This is Well Overloading of Operator !";
+    }
+    else
+    {
+        cout << "Overloading is Fail";
+    }
     return 0;
 }
