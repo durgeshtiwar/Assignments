@@ -1,42 +1,29 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
-int binaryToDecimal(int num)
+void checkPowerOfTwo(int num)
 {
-    if (num < 0)
+    int rem;
+    while (true)
     {
-        num = -1 * num;
-        int result = 0;
-        int pow = 1;
-        while (num > 0)
+        rem = num%2;
+        num = num/2;
+        if (rem == 1)
         {
-            result += (num % 2) * pow;
-            num = num / 2;
-            pow = pow * 10;
+            cout<<"Given no is not a Power of 2";
+            break;
         }
-        result += pow;
-        return result;
-    }
-    else
-    {
-        int result = 0;
-        int pow = 1;
-        while (num > 0)
-        {
-            result += (num % 2) * pow;
-            num = num / 2;
-            pow = pow * 10;
+        if (num == 1)
+        { 
+            cout<<"Given num is a Power of 2";
+            break;
         }
-        return result;
     }
-    
-    
 }
 int main()
 {
-    int num, result;
-    cout << "Enter the value of number";
-    cin >> num;
-    result = binaryToDecimal(num);
-    cout << "Binay form of given no is : " << result<<endl;
+    int num;
+    cout<<"Enter the no.";
+    cin>>num;
+    checkPowerOfTwo(num);
     return 0;
 }
