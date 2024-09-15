@@ -1,29 +1,25 @@
 #include<iostream>
+#include<limits>
 using namespace std;
-void checkPowerOfTwo(int num)
+void smallestNumber(int arr[], int size)
 {
-    int rem;
-    while (true)
+    int targetNo = std::numeric_limits<int>::max();
+    int index = 0;
+    for (int i = 0; i < size; i++)
     {
-        rem = num%2;
-        num = num/2;
-        if (rem == 1)
+        if (arr[i] < targetNo)
         {
-            cout<<"Given no is not a Power of 2";
-            break;
+            targetNo = arr[i];
+            index = i;
         }
-        if (num == 1)
-        { 
-            cout<<"Given num is a Power of 2";
-            break;
-        }
+        
     }
+    cout<<"The Smallest No is = "<<targetNo<<" and it's index is = "<<index<<endl;
+    
 }
 int main()
 {
-    int num;
-    cout<<"Enter the no.";
-    cin>>num;
-    checkPowerOfTwo(num);
+    int arr[5] = {4,5,7,2,9};
+    smallestNumber(arr, 5);
     return 0;
 }
