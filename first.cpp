@@ -1,31 +1,25 @@
 #include<iostream>
 #include<vector>
 using namespace std;
-void reverseFunction(vector<int>&vec, int size){
-    for (int i = 0; i < size; i++)
+int findSubarray(vector<int> &vec, int size)
+{
+    int maxSum = 0, currentSum = 0;
+    for (int start = 0; start < size; start++)
     {
-        if (i <= size-i)
+        currentSum = currentSum + vec[start] ;
+        maxSum = max(maxSum, currentSum);
+        if (currentSum<0)
         {
-            swap(vec[i],vec[size - i]);
+            currentSum = 0;
         }
         
     }
+    return maxSum;
     
 }
 int main()
 {
-    vector<int> vec = {4,8,7,9,2,52,78,90,100,759};
-    for (int i : vec)
-    {
-        cout<<i<<" ";
-    }
-    cout<<endl;
-    int size = vec.size();
-    reverseFunction(vec,size-1);
-    for (int i : vec)
-    {
-        cout<<i<<" ";
-    }
-    
+    vector<int> vec = {4,1,-7,9,5};
+    cout<<"SumArray is = "<< findSubarray(vec, vec.size());
     return 0;
 }
