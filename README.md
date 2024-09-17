@@ -1,4 +1,3 @@
-1. Maximum Subarray Sum (Kadane's Algorithm)
-2. Majority element 
-3. Config readux Toolkit 
-4. write sub pipelines and routes
+1. Majority element  
+2. write sub pipelines and routes
+3. Production Grade react Components
