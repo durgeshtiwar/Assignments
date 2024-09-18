@@ -1,25 +1,31 @@
 #include<iostream>
 #include<vector>
 using namespace std;
-int findSubarray(vector<int> &vec, int size)
+int majorityElement(vector<int> &vec)
 {
-    int maxSum = 0, currentSum = 0;
-    for (int start = 0; start < size; start++)
+    int size = vec.size();
+    int freq = 0;
+    int ans;
+    for( int i = 0; i < size; i++)
     {
-        currentSum = currentSum + vec[start] ;
-        maxSum = max(maxSum, currentSum);
-        if (currentSum<0)
+        if (freq == 0)
         {
-            currentSum = 0;
+            ans = vec[i];
         }
         
+        if (ans == vec[i])
+        {
+            freq++;
+        }else
+        {
+            freq--;
+        }
     }
-    return maxSum;
-    
+    return ans;
 }
 int main()
 {
-    vector<int> vec = {4,1,-7,9,5};
-    cout<<"SumArray is = "<< findSubarray(vec, vec.size());
+    vector<int> vec = {1,1,2,2,1,1,1,2,2,2,2,2,2,2,2,2,4};
+    cout <<"Element is = "<< majorityElement(vec)<<endl;
     return 0;
 }
