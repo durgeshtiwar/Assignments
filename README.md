@@ -1,3 +1,3 @@
-1. Majority element  
-2. write sub pipelines and routes
-3. Production Grade react Components
+1. Production Grade react Components
+2. Revison With starting Backend
+3. WordPress(if Possible then)

@@ -1,31 +1,35 @@
 #include<iostream>
 #include<vector>
 using namespace std;
-int majorityElement(vector<int> &vec)
-{
-    int size = vec.size();
-    int freq = 0;
-    int ans;
-    for( int i = 0; i < size; i++)
-    {
-        if (freq == 0)
+void rotate(vector<int>& nums, int k) {
+        int size = nums.size();
+        vector<int>newVect;
+        k = k % size; 
+        for(int i = 0; i < size; i++)
         {
-            ans = vec[i];
+            if(k>i)
+            {
+                newVect.push_back(nums[size + i - k]);
+                nums.pop_back();
+            }
+            else
+            {
+                newVect.push_back(nums[i - k]);
+                nums.pop_back();
+            }
         }
-        
-        if (ans == vec[i])
+        for(int i : newVect)
         {
-            freq++;
-        }else
-        {
-            freq--;
-        }
-    }
-    return ans;
-}
+            nums.push_back(i);
+        } 
+    } 
 int main()
 {
-    vector<int> vec = {1,1,2,2,1,1,1,2,2,2,2,2,2,2,2,2,4};
-    cout <<"Element is = "<< majorityElement(vec)<<endl;
+    vector <int> vec = {1,2,3,4};
+    rotate(vec, 6);
+    for(int i : vec)
+    {
+        cout<<i<<", ";
+    }
     return 0;
 }
