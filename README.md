@@ -1,4 +1,3 @@
-
-1. Revison With starting Backend
-2. React Hook {Project}
-3. WordPress(if Possible then)
+1. Startin with Project (React)
+2. start Data Structure
+   
