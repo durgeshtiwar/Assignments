@@ -1,2 +1,2 @@
-1. Laravel Foundation
-2. SQL Basics
+1. Laravel Database Connection
+2. SQL Next Chapter
