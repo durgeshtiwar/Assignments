@@ -28,14 +28,27 @@
 # else:
 #   print(Var_3, "is greatest")
 
-year = int(input("Enter a year"))
-if(year%100 == 0):
-  if(year%400 == 0):
-    print("This is a leap year")
-  else:
-    print("This is not a leap year")  
-elif(year%4 == 0):
-  print("This is a leap year")
-else:
-  print("This is not a leap year")
+#.4
+# year = int(input("Enter a year"))
+# if(year%100 == 0):
+#   if(year%400 == 0):
+#     print("This is a leap year")
+#   else:
+#     print("This is not a leap year")  
+# elif(year%4 == 0):
+#   print("This is a leap year")
+# else:
+#   print("This is not a leap year")
+
+# 4.
+# var_1 = int(input("Enter the no."))
+# incre = 1
+# while(incre <= 10):
+#   print(var_1,"*",incre,"=",var_1*incre)
+#   incre = incre + 1 
   
+# var_1 = int(input("Enter the no."))
+# while(var_1 != 0):
+#   temp = var_1 % 10
+#   var_1 = var_1//10
+#   print(temp, end='')
